@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Math Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="main">
+        <div class="container">
+            <div class="notif">
+                <h3>Jawaban kamu benar!</h3>
+            </div>
+            <div class="start">
+                <h1>Tebak Matematika</h1>
+                <button class="start-btn">Mulai</button>
+            </div> 
+        </div>
+        <button class="close-notes note">Tutup Catatan</button>
+        <button class="open-notes note">Panggil Catatan</button>
+        <div class="drawing-board">
+            <div class="tools">
+                <div class="tool">
+                    <button class="brush active">Brush</button>
+                    <button class="clear-canvas">Clear canvas</button>
+                    <input type="range" value="3" min="1" max="10">
+                </div>
+                <div class="screen-math">
+                    <h2 class="valueA">0</h2>
+                    <h2 class="operation">+</h2>
+                    <h2 class="valueB">0</h2>
+                </div>
+            </div>
+            <canvas></canvas>
+        </div>
+    </section>
+    <section id="drawing"></section>
+    <script src="script.js"></script>
+</body>
+
+</html>
