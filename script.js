@@ -36,9 +36,15 @@ clearCanvas.addEventListener("click", () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 });
 
-canvas.addEventListener("mousedown", startdrawing);
-canvas.addEventListener("mousemove", drawing);
-canvas.addEventListener("mouseup", stopdrawing);
+if (this.innerWidth <= 600) {
+  canvas.addEventListener("touchstart", startdrawing);
+  canvas.addEventListener("touchmove", drawing);
+  canvas.addEventListener("touchend", stopdrawing);
+} else {
+  canvas.addEventListener("mousedown", startdrawing);
+  canvas.addEventListener("mousemove", drawing);
+  canvas.addEventListener("mouseup", stopdrawing);
+}
 
 startBtn.addEventListener("click", () => {
   container.innerHTML = pages.mathOptionPage;
