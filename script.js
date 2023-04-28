@@ -31,6 +31,7 @@ const drawing = (e) => {
 const touchDrawing = (e) => {
   const x = e.touches[0].clientX - canvas.offsetLeft;
   const y = e.touches[0].clientY - 215;
+  brushWidth = document.querySelector(".tool input").value;
   ctx.lineWidth = brushWidth;
   ctx.lineTo(x, y);
   ctx.stroke();
@@ -47,7 +48,6 @@ clearCanvas.addEventListener("click", () => {
 if (this.innerWidth <= 600) {
   canvas.addEventListener("touchstart", startdrawing);
   canvas.addEventListener("touchmove", touchDrawing);
-  canvas.addEventListener("touchend", stopdrawing);
 } else {
   canvas.addEventListener("mousedown", startdrawing);
   canvas.addEventListener("mousemove", drawing);
